@@ -9,11 +9,11 @@ class CustomImagePicker {
     File? image;
     try {
       // Pick a single image
-      final XFile? pickedFile =
+      final XFile? pickFile =
           await _picker.pickImage(source: source);
 
-      if (pickedFile != null) {
-        image = File(pickedFile.path);
+      if (pickFile != null) {
+        image = File(pickFile.path);
       }
     } catch (e) {
       debugPrint(e.toString());
